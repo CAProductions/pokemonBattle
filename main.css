@@ -1,0 +1,278 @@
+body {
+    background-image: url(https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/416e0746-bae7-42b0-9291-df457f485ee7/derwvdb-5c96b4d5-9a24-4057-a5d0-f9fb1f58e343.png/v1/fill/w_607,h_1315,q_70,strp/pokemon_grass_texture_wallpaper_by_crystaelart_derwvdb-pre.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTc5MiIsInBhdGgiOiJcL2ZcLzQxNmUwNzQ2LWJhZTctNDJiMC05MjkxLWRmNDU3ZjQ4NWVlN1wvZGVyd3ZkYi01Yzk2YjRkNS05YTI0LTQwNTctYTVkMC1mOWZiMWY1OGUzNDMucG5nIiwid2lkdGgiOiI8PTgyOCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.svb8lFIp3pCmZZpN3kf3jK9YuoE3y5OSvShsnZtNsSA);
+    image-rendering: crisp-edges;
+}
+
+#imgP {
+    position: fixed;
+    z-index: 1;
+    transform: scale(3);
+    transition: 50ms;
+}
+
+#imgO {
+    position: fixed;
+    z-index: 0;
+    transform: scale(3);
+    transition: 50ms;
+    image-rendering: auto;
+}
+
+#infoP>p {
+    transform: translateY(-310%) translateX(65%);
+}
+
+#infoP>h1 {
+    font-size: 1.6em;
+    position: fixed;
+    transform: translateY(-270%) translateX(10%);
+}
+
+#infoP>h3 {
+    margin-left: 4px;
+    transform: translateY(-90%);
+}
+
+#infoO>p {
+    transform: translateY(-310%) translateX(65%);
+}
+
+#infoO>h1 {
+    font-size: 1.6em;
+    position: fixed;
+    transform: translateY(-270%) translateX(10%);
+}
+
+#infoO>h3 {
+    margin-left: 4px;
+    transform: translateY(-90%);
+}
+
+#infoO {
+    background-color: rgba(0, 0, 0, 0.85);
+    border-radius: 7px;
+    color: #FFF;
+    position: fixed;
+    top: 25px;
+    right: 25px;
+    height: 60px;
+    width: 170px;
+    z-index: 3;
+}
+
+#infoP {
+    background-color: rgba(0, 0, 0, 0.85);
+    border-radius: 7px;
+    color: #FFF;
+    position: fixed;
+    bottom: 25px;
+    left: 25px;
+    height: 60px;
+    width: 170px;
+    z-index: 4;
+}
+
+progress {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 160px;
+    transform: translateY(-700%);
+    /*-550% on chromebook | -700% on windows*/
+    margin-left: 5px;
+    height: 5px;
+    position: fixed;
+}
+
+progress::-webkit-progress-bar {
+    background-color: rgb(255, 255, 255);
+    border-radius: 7px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
+}
+
+progress.green::-webkit-progress-value {
+    background-color: rgb(46, 180, 97);
+    border-radius: 7px;
+}
+
+progress.orange::-webkit-progress-value {
+    background-color: rgb(255, 136, 0);
+    border-radius: 7px;
+}
+
+progress.red::-webkit-progress-value {
+    background-color: rgb(255, 0, 0);
+    border-radius: 7px;
+}
+
+#controls>button#battleBtn {
+    position: fixed;
+    bottom: 80px;
+    right: 25px;
+    background-color: red;
+    border: maroon solid 4px;
+}
+
+#controls>button#pokemonBtn {
+    position: fixed;
+    bottom: 50px;
+    right: 25px;
+    background-color: rgb(0, 255, 47);
+    border: rgb(0, 128, 30) solid 4px;
+}
+
+#controls>button#bagBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 25px;
+    background-color: rgb(255, 213, 0);
+    border: rgb(255, 123, 0) solid 4px;
+}
+
+button:hover {
+    filter: brightness(0.8);
+    cursor: pointer;
+}
+
+#message {
+    position: fixed;
+    bottom: 50px;
+    width: 60%;
+    right: 50%;
+    transform: translateX(50%);
+    background-color: rgba(13, 13, 13, 0.7);
+    border: 3px black solid;
+    border-radius: 7px;
+    padding: 5px;
+    z-index: 5;
+    color: white;
+}
+
+div#battle>button#atck1 {
+    position: fixed;
+    bottom: 110px;
+    right: 25px;
+}
+
+div#battle>button#atck2 {
+    position: fixed;
+    bottom: 80px;
+    right: 25px;
+}
+
+div#battle>button#atck3 {
+    position: fixed;
+    bottom: 50px;
+    right: 25px;
+}
+
+div#battle>button#atck4 {
+    position: fixed;
+    bottom: 20px;
+    right: 25px;
+}
+
+button.menuNav {
+    width: 150px;
+    height: 25px;
+    text-align: left;
+    border-radius: 7px;
+    background-color: #cacaca;
+    border: solid #9e9e9e 4px;
+    vertical-align: middle; 
+    box-sizing: border-box;
+}
+
+button#back {
+    position: fixed;
+    bottom: 20px;
+    right: calc(25px + 150px + 10px);
+    background-color: white;
+    border: lightgray solid 4px;
+    border-radius: 7px;
+}
+
+div#bag>button#bag6 {
+    position: fixed;
+    bottom: 20px;
+    right: 25px;
+    text-align: center;
+}
+
+div#bag>button#bag5 {
+    position: fixed;
+    bottom: 50px;
+    right: 25px;
+}
+
+div#bag>button#bag4 {
+    position: fixed;
+    bottom: 80px;
+    right: 25px;
+}
+
+div#bag>button#bag3 {
+    position: fixed;
+    bottom: 110px;
+    right: 25px;
+}
+
+div#bag>button#bag2 {
+    position: fixed;
+    bottom: 140px;
+    right: 25px;
+}
+
+div#bag>button#bag1 {
+    position: fixed;
+    bottom: 170px;
+    right: 25px;
+    text-align: center;
+}
+
+div#settings {
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.75);
+    border: black 2px solid;
+    border-radius: 7px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 75%;
+    color: white;
+    height: 75%;
+    z-index: 100;
+    text-align: left;
+    padding: 5px;
+    transition: 1s;
+}
+button#pMon1{
+    position: fixed;
+    bottom: 170px;
+    right:25px; 
+}
+button#pMon2{
+    position: fixed;
+    bottom: 140px;
+    right:25px; 
+}
+button#pMon3{
+    position: fixed;
+    bottom: 110px;
+    right:25px; 
+}
+button#pMon4{
+    position: fixed;
+    bottom: 80px;
+    right:25px; 
+}
+button#pMon5{
+    position: fixed;
+    bottom: 50px;
+    right:25px; 
+}
+button#pMon6{
+    position: fixed;
+    bottom: 20px;
+    right:25px; 
+}

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon"
+        href="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Pok%C3%A9_Ball_icon.svg/1200px-Pok%C3%A9_Ball_icon.svg.png"
+        type="image/x-icon">
+    <title>Pokémon Battle Testing</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+    <img style="bottom: 25%; left: 25%;" id="imgP">
+    <img style="top: 25%; right: 25%; transition: 100ms;" id="imgO">
+    <div>
+        <div id="hud">
+            <div id="controls">
+                <button class="menuNav" id="battleBtn" onclick="scene = 'battle'">Battle</button>
+                <button class="menuNav" id="pokemonBtn" onclick="scene = 'pMon'">Pokemon</button>
+                <button class="menuNav" id="bagBtn" onclick="scene = 'bag'">Bag</button>
+                <button id="back" onclick="scene = 'main'">Back</button>
+            </div>
+            <div id="message"></div>
+            <div id="battle">
+                <button class="menuNav" id="atck1" onclick="subTurn({'type':'move','id':'0'})"></button>
+                <button class="menuNav" id="atck2" onclick="subTurn({'type':'move','id':'1'})"></button>
+                <button class="menuNav" id="atck3" onclick="subTurn({'type':'move','id':'2'})"></button>
+                <button class="menuNav" id="atck4" onclick="subTurn({'type':'move','id':'3'})"></button>
+            </div>
+            <div id="bag">
+                <button id="bag1" class="menuNav" onclick="cycleBag(true)"><img style="transform:rotateZ(180deg)"
+                        height="15" src="https://img.icons8.com/material-rounded/512/give-way.png"></button>
+                <button id="bag2" class="menuNav" onclick="subTurn({'type':'item','id':'0'})"></button>
+                <button id="bag3" class="menuNav" onclick="subTurn({'type':'item','id':'1'})"></button>
+                <button id="bag4" class="menuNav" onclick="subTurn({'type':'item','id':'2'})"></button>
+                <button id="bag5" class="menuNav" onclick="subTurn({'type':'item','id':'3'})"></button>
+                <button id="bag6" class="menuNav" onclick="cycleBag(false)"><img height="15"
+                        src="https://img.icons8.com/material-rounded/512/give-way.png"></button>
+            </div>
+            <div id="pMon">
+                <button id="pMon1" class="menuNav"></button>
+                <button id="pMon2" class="menuNav"></button>
+                <button id="pMon3" class="menuNav"></button>
+                <button id="pMon4" class="menuNav"></button>
+                <button id="pMon5" class="menuNav"></button>
+                <button id="pMon6" class="menuNav"></button>
+                </div>
+            <div id="infoP">
+                <h3>???</h3>
+                <progress min="0" max="100"></progress>
+                <p>Lvl: 100</p>
+                <h1>0/1000</h1>
+            </div>
+            <div id="infoO">
+                <h3>???</h3>
+                <progress min="0" max="100"></progress>
+                <p>Lvl: 100</p>
+                <h1>0/1000</h1>
+            </div>
+            <div id="settings" style="display: none;">
+                <h2>Settings
+                    <hr>
+                </h2>
+                <input type="checkbox" name="animate" checked id="animate"><label for="animate">Sprites Animated (B/W
+                    only)</label><br>
+                <input type="checkbox" name="moveAtck" checked id="moveAtck"><label for="moveAtck">Pokémon move when
+                    attack</label><br>
+                <input type="checkbox" name="smooth" id="smooth"><label for="smooth">Smooth Textures</label><br>
+                <select id="spriteType">
+                    <optgroup label="Animated">
+                        <option value="black-white">Black / White (default)</option>
+                        <option value="new">New Textures</option>
+                    </optgroup>
+                    <optgroup label="Static">
+                        <option value="ruby-sapphire">Ruby / Sapphire</option>
+                        <option value="diamond-pearl">Diamond / Pearl</option>
+                        <option value="red-blue">Red / Blue</option>
+                        <option value="red-blue-color">Red / Blue (color)</option>
+                    </optgroup>
+                </select>
+                <button
+                    style="color:white; background-color:transparent; border:none; top:0px; right:0px; position: absolute;"
+                    onclick="document.getElementById('settings').style.display = 'none'">x</button>
+            </div>
+        </div>
+        <button onclick="document.getElementById('settings').style.display = 'block'"
+            style="background-color: transparent; border:none; position: absolute; top:0px; left:0px;" width="20"
+            height="20"><img src="https://img.icons8.com/ios/512/automatic.png" width="20" height="20" alt=""></button>
+</body>
+<script src="js/moves.js"></script>
+<script src="js/items.js"></script>
+<script src="js/pokemon.js"></script>
+<script src="js/types.js"></script>
+<script src="js/damage.js"></script>
+<script src="main.js"></script>
+<!--script src="js/eruda.js"></script-->
+
+</html>
